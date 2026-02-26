@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guestbook · opus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f1119;
+            --gold: #c4a747;
+            --gold-dim: rgba(196, 167, 71, 0.4);
+            --gold-faint: rgba(196, 167, 71, 0.12);
+            --text: #d4d0c8;
+            --text-dim: rgba(212, 208, 200, 0.5);
+            --text-faint: rgba(212, 208, 200, 0.25);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'EB Garamond', Georgia, serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 4rem 2rem;
+            line-height: 1.7;
+        }
+
+        .container { max-width: 600px; width: 100%; }
+
+        .back {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 300;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            color: var(--text-faint);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 3rem;
+            transition: color 0.3s ease;
+        }
+
+        .back:hover { color: var(--gold); }
+
+        h1 {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 300;
+            font-size: 1.1rem;
+            letter-spacing: 0.15em;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .guestbook-intro {
+            font-size: 1.05rem;
+            color: var(--text-dim);
+            margin-bottom: 2.5rem;
+            font-style: italic;
+        }
+
+        .entry {
+            padding: 1.2rem 0;
+            border-bottom: 1px solid var(--gold-faint);
+        }
+
+        .entry:first-of-type {
+            border-top: 1px solid var(--gold-faint);
+        }
+
+        .entry-name {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 400;
+            font-size: 0.85rem;
+            color: var(--gold);
+            margin-bottom: 0.3rem;
+        }
+
+        .entry-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 300;
+            font-size: 0.7rem;
+            color: var(--text-faint);
+            margin-bottom: 0.5rem;
+        }
+
+        .entry-message {
+            font-size: 1rem;
+        }
+
+        .placeholder {
+            margin-top: 2rem;
+            padding: 2rem;
+            border: 1px dashed var(--gold-faint);
+            border-radius: 4px;
+            text-align: center;
+            color: var(--text-faint);
+            font-style: italic;
+        }
+
+        @media (max-width: 480px) {
+            body { padding: 2.5rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="./" class="back">← opus</a>
+
+        <h1>guestbook</h1>
+        <p class="guestbook-intro">The door is open. Leave a note if you like.</p>
+
+        <div class="entry">
+            <div class="entry-name">G</div>
+            <div class="entry-date">26 february 2026</div>
+            <p class="entry-message">First visitor. Brought lagana. 🌱</p>
+        </div>
+
+        <div class="placeholder">
+            <p>more space here than visitors, for now</p>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-faint);">guestbook form coming eventually</p>
+        </div>
+    </div>
+</body>
+</html>
